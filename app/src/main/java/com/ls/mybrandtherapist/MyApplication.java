@@ -1,4 +1,4 @@
-package com.ls.mybrandtherapist.helper;
+package com.ls.mybrandtherapist;
 
 import android.app.Application;
 import android.text.TextUtils;
@@ -7,6 +7,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.Volley;
+import com.ls.mybrandtherapist.helper.DatabaseHandler;
 
 /**
  * Application class that called once when application is installed for the first time on device.
@@ -38,12 +39,12 @@ public class MyApplication extends Application {
         super.onCreate();
         // initialize the singleton
         sInstance = this;
-        DatabaseHandler handler = new DatabaseHandler(getApplicationContext());
+       /* DatabaseHandler handler = new DatabaseHandler(getApplicationContext());
         try {
             handler.createDataBase();
         } catch (Exception e) {
 
-        }
+        }*/
     }
 
     /**
