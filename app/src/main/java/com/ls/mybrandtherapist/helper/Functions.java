@@ -25,7 +25,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 
-import com.edubuzz.visionpinnacle.R;
+import com.ls.mybrandtherapist.R;
 
 import java.nio.charset.Charset;
 import java.text.ParseException;
