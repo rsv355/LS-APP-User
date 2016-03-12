@@ -6,10 +6,11 @@ import android.os.Bundle;
 
 import com.ls.mybrandtherapist.R;
 import com.ls.mybrandtherapist.login_signup_stage.adapter.PagerAdapter;
+import com.ls.mybrandtherapist.login_signup_stage.presenter.WelcomeView;
 import com.ls.mybrandtherapist.login_signup_stage.widget.CircleIndicator;
 
-public class Log_Sign_ParentActivity extends AppCompatActivity {
-
+public class Log_Sign_ParentActivity extends AppCompatActivity implements WelcomeView {
+    private ViewPager viewpager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,10 +21,15 @@ public class Log_Sign_ParentActivity extends AppCompatActivity {
 
     private void init() {
 
-        ViewPager viewpager = (ViewPager) findViewById(R.id.viewpager);
+        viewpager = (ViewPager) findViewById(R.id.viewpager);
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         viewpager.setAdapter(new PagerAdapter(getSupportFragmentManager()));
         indicator.setViewPager(viewpager);
         viewpager.setCurrentItem(0);
+    }
+
+    @Override
+    public void changeTab(int pos) {
+        viewpager.setCurrentItem(pos);
     }
 }
