@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.ls.mybrandtherapist.login_signup_stage.fragments.CreateAccountFragment;
 import com.ls.mybrandtherapist.login_signup_stage.fragments.LoginFragment;
 import com.ls.mybrandtherapist.login_signup_stage.fragments.WelcomeFragment;
 
@@ -25,7 +26,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
             case 1: return LoginFragment.newInstance("", "");
 
-            case 2: return WelcomeFragment.newInstance("", "");
+            case 2: return CreateAccountFragment.newInstance("", "");
 
             default: return WelcomeFragment.newInstance("", "");
 
