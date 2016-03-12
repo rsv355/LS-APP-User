@@ -3,15 +3,15 @@ package com.ls.mybrandtherapist.login_signup_stage.presenter.loginPresenter;
 /**
  * Created by Krish on 12/3/2016.
  */
-public class loginPresenterImpl implements loginPresenter {
-    private loginView loginView;
+public class LoginPresenterImpl implements LoginPresenter {
+    private LoginView LoginView;
 
-    public loginPresenterImpl(loginView view) {
-        this.loginView = view;
+    public LoginPresenterImpl(LoginView view) {
+        this.LoginView = view;
     }
 
     @Override
     public void Login() {
-        loginView.doLogin();
+        LoginView.doLogin();
     }
 }
