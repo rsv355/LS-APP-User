@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.ls.mybrandtherapist.login_signup_stage.fragments.CreateAccountFragment;
 import com.ls.mybrandtherapist.login_signup_stage.fragments.LoginFragment;
 
 /**
@@ -20,7 +21,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position){
-            case 0:  return LoginFragment.newInstance("","");
+            case 0:  return CreateAccountFragment.newInstance("", "");
 
             case 1: return LoginFragment.newInstance("","");
 
