@@ -4,4 +4,9 @@
 
     <string name="internet_error">Please connect your Internet.</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="motiviation_msg1">\"Motiviating people will be the most important responsibility of my career.\"</string>
+
 </resources>

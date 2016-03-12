@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context="com.ls.mybrandtherapist.login_signup_stage.fragments.LoginFragment">
+
+  <ImageView
+      android:id="@+id/imgAppLogo"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="@dimen/dimen48dp"
+      android:layout_centerHorizontal="true"
+      android:src="@drawable/applogo_white"
+      android:layout_width="@dimen/appLogo_Login"
+      android:layout_height="@dimen/appLogo_Login" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dimen16dp"
+        android:layout_below="@+id/imgAppLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/appSilverColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="WELCOME" />
+
+        <TextView
+            android:layout_marginTop="@dimen/dimen4dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/appWhiteColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="I AM YOUR BRAND THERAPIST" />
+
+        <View
+            android:layout_marginTop="@dimen/dimen8dp"
+            android:layout_gravity="center"
+            android:background="@color/appDividerBlueColor"
+            android:layout_width="@dimen/dimen250dp"
+            android:layout_height="0.5dp"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/dimen8dp"
+            android:textStyle="italic"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/appWhiteColor"
+            android:layout_width="@dimen/dimen300dp"
+            android:layout_height="match_parent"
+            android:text="@string/motiviation_msg1" />
+
+        <ImageView
+            android:layout_marginTop="@dimen/dimen8dp"
+            android:src="@drawable/signature"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen16dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.ls.mybrandtherapist.helper.Functions;
+import com.ls.mybrandtherapist.login_signup_stage.Log_Sign_ParentActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -59,7 +60,7 @@ public class SplashActivity extends AppCompatActivity {
 
                 @Override
                 public void onFinish() {
-                    startActivity(new Intent(SplashActivity.this,MainActivity.class));
+                    startActivity(new Intent(SplashActivity.this,Log_Sign_ParentActivity.class));
                     finish();
                 }
             }.start();

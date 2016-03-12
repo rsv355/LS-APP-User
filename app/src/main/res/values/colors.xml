@@ -7,4 +7,8 @@
 
     <color name="circleImageItem">#136ba2</color>
     <color name="circleTextItem">#272727</color>
+
+    <color name="appSilverColor">#cccccc</color>
+    <color name="appDividerBlueColor">#136ba2</color>
+    <color name="appWhiteColor">#ffffff</color>
 </resources>
