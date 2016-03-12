@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import com.ls.mybrandtherapist.R;
 
 
-public class CreateAccountFragment extends Fragment {
+public class WelcomeFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -21,12 +21,12 @@ public class CreateAccountFragment extends Fragment {
 
 
 
-    public CreateAccountFragment() {
+    public WelcomeFragment() {
         // Required empty public constructor
     }
 
-    public static CreateAccountFragment newInstance(String param1, String param2) {
-        CreateAccountFragment fragment = new CreateAccountFragment();
+    public static WelcomeFragment newInstance(String param1, String param2) {
+        WelcomeFragment fragment = new WelcomeFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -47,7 +47,7 @@ public class CreateAccountFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_create_account, container, false);
+        return inflater.inflate(R.layout.fragment_welcometab, container, false);
     }
 
 

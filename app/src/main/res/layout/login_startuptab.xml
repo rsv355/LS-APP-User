@@ -1,30 +1,50 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/dimen300dp"
-    android:layout_height="@dimen/dimen100dp"
-    android:background="@drawable/startup_bg"
+    android:layout_height="@dimen/dimen130dp"
+    android:background="@drawable/create_account_tab"
     android:layout_gravity="center"
     android:layout_alignParentBottom="true"
     android:layout_centerHorizontal="true"
     android:layout_marginBottom="@dimen/dimen48dp"
-    tools:context="com.ls.mybrandtherapist.login_signup_stage.fragments.LoginFragment">
+    tools:context=".login_signup_stage.fragments.WelcomeFragment">
 
-    <TextView
-        android:padding="@dimen/dimen16dp"
-        android:id="@+id/txtLogin"
+    <EditText
+        android:maxLength="15"
+        android:singleLine="true"
+        android:background="@null"
+        android:padding="@dimen/dimen12dp"
+        android:id="@+id/txtUserName"
         android:gravity="center"
         android:textColor="#000"
+        android:hint="Username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:maxLength="15"
+        android:singleLine="true"
+        android:inputType="textWebPassword"
+        android:background="@null"
+        android:padding="@dimen/dimen12dp"
+        android:layout_below="@+id/txtUserName"
+        android:id="@+id/txtCreateAccount"
+        android:gravity="center"
+        android:textColor="#000"
+        android:hint="Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+   <TextView
+       android:padding="@dimen/dimen4dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/txtCreateAccount"
+        android:id="@+id/txtLogin"
+        android:gravity="center"
+        android:textColor="#fff"
         android:text="LOG IN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:padding="@dimen/dimen16dp"
-        android:layout_below="@+id/txtLogin"
-        android:id="@+id/txtCreateAccount"
-        android:gravity="center"
-        android:textColor="#000"
-        android:text="CREATE ACCOUNT"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
 </RelativeLayout>
