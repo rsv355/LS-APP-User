@@ -6,14 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ls.mybrandtherapist.R;
-import com.ls.mybrandtherapist.login_signup_stage.presenter.WelcomePresenter;
-import com.ls.mybrandtherapist.login_signup_stage.presenter.WelcomePresenterImpl;
-import com.ls.mybrandtherapist.login_signup_stage.presenter.WelcomeView;
-
-import org.w3c.dom.Text;
+import com.ls.mybrandtherapist.login_signup_stage.presenter.welcomePresenter.WelcomePresenter;
+import com.ls.mybrandtherapist.login_signup_stage.presenter.welcomePresenter.WelcomePresenterImpl;
+import com.ls.mybrandtherapist.login_signup_stage.presenter.welcomePresenter.WelcomeView;
 
 
 public class WelcomeFragment extends Fragment implements View.OnClickListener{

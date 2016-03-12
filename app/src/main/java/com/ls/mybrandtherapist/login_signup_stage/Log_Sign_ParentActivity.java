@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.ls.mybrandtherapist.R;
 import com.ls.mybrandtherapist.login_signup_stage.adapter.PagerAdapter;
-import com.ls.mybrandtherapist.login_signup_stage.presenter.WelcomeView;
+import com.ls.mybrandtherapist.login_signup_stage.presenter.welcomePresenter.WelcomeView;
 import com.ls.mybrandtherapist.login_signup_stage.widget.CircleIndicator;
 
 public class Log_Sign_ParentActivity extends AppCompatActivity implements WelcomeView {

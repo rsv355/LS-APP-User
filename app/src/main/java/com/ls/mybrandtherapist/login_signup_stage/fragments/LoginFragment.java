@@ -1,15 +1,22 @@
 package com.ls.mybrandtherapist.login_signup_stage.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.ls.mybrandtherapist.MainActivity;
 import com.ls.mybrandtherapist.R;
+import com.ls.mybrandtherapist.login_signup_stage.Log_Sign_ParentActivity;
+import com.ls.mybrandtherapist.login_signup_stage.presenter.loginPresenter.loginPresenter;
+import com.ls.mybrandtherapist.login_signup_stage.presenter.loginPresenter.loginPresenterImpl;
+import com.ls.mybrandtherapist.login_signup_stage.presenter.loginPresenter.loginView;
 
 
-public class LoginFragment extends Fragment {
+public class LoginFragment extends Fragment implements loginView,View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -19,8 +26,8 @@ public class LoginFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-
-
+    private loginPresenter loginPresenter;
+    private TextView txtLogin;
     public LoginFragment() {
         // Required empty public constructor
     }
@@ -47,10 +54,33 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false);
+        View rootView =  inflater.inflate(R.layout.fragment_login, container, false);
+
+        loginPresenter = new loginPresenterImpl(this);
+
+        init(rootView);
+
+        return rootView;
+    }
+
+    private void init(View rootView) {
+        txtLogin = (TextView)rootView.findViewById(R.id.txtLogin);
+        txtLogin.setOnClickListener(this);
     }
 
 
+    @Override
+    public void doLogin() {
+        startActivity(new Intent(getActivity(), MainActivity.class));
+        getActivity().finish();
+    }
 
-
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.txtLogin:
+                loginPresenter.Login();
+                break;
+        }
+    }
 }
