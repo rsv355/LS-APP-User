@@ -6,7 +6,7 @@
     android:layout_gravity="center"
     android:layout_alignParentBottom="true"
     android:layout_centerHorizontal="true"
-    android:layout_marginBottom="@dimen/dimen32dp"
+    android:layout_marginBottom="@dimen/dimen48dp"
     tools:context="com.ls.mybrandtherapist.login_signup_stage.fragments.LoginFragment">
 
     <TextView

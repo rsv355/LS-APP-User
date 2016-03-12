@@ -21,9 +21,9 @@ public class PagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position){
-            case 0:  return CreateAccountFragment.newInstance("", "");
+            case 0: return LoginFragment.newInstance("", "");
 
-            case 1: return LoginFragment.newInstance("","");
+            case 1: return CreateAccountFragment.newInstance("","");
 
             case 2: return LoginFragment.newInstance("","");
 
