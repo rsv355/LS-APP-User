@@ -10,13 +10,12 @@ import android.widget.TextView;
 
 import com.ls.mybrandtherapist.MainActivity;
 import com.ls.mybrandtherapist.R;
-import com.ls.mybrandtherapist.login_signup_stage.Log_Sign_ParentActivity;
-import com.ls.mybrandtherapist.login_signup_stage.presenter.loginPresenter.loginPresenter;
-import com.ls.mybrandtherapist.login_signup_stage.presenter.loginPresenter.loginPresenterImpl;
-import com.ls.mybrandtherapist.login_signup_stage.presenter.loginPresenter.loginView;
+import com.ls.mybrandtherapist.login_signup_stage.presenter.loginPresenter.LoginPresenter;
+import com.ls.mybrandtherapist.login_signup_stage.presenter.loginPresenter.LoginPresenterImpl;
+import com.ls.mybrandtherapist.login_signup_stage.presenter.loginPresenter.LoginView;
 
 
-public class LoginFragment extends Fragment implements loginView,View.OnClickListener {
+public class LoginFragment extends Fragment implements LoginView,View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -26,7 +25,7 @@ public class LoginFragment extends Fragment implements loginView,View.OnClickLis
     private String mParam1;
     private String mParam2;
 
-    private loginPresenter loginPresenter;
+    private LoginPresenter LoginPresenter;
     private TextView txtLogin;
     public LoginFragment() {
         // Required empty public constructor
@@ -56,10 +55,9 @@ public class LoginFragment extends Fragment implements loginView,View.OnClickLis
         // Inflate the layout for this fragment
         View rootView =  inflater.inflate(R.layout.fragment_login, container, false);
 
-        loginPresenter = new loginPresenterImpl(this);
+        LoginPresenter = new LoginPresenterImpl(this);
 
         init(rootView);
-
         return rootView;
     }
 
@@ -79,7 +77,7 @@ public class LoginFragment extends Fragment implements loginView,View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.txtLogin:
-                loginPresenter.Login();
+                LoginPresenter.Login();
                 break;
         }
     }
