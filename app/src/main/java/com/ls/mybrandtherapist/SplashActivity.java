@@ -49,7 +49,7 @@ public class SplashActivity extends AppCompatActivity {
         });
         mAnimationSet.start();
 
-       /* if(Functions.isInternetConnected(SplashActivity.this)){
+        if(Functions.isInternetConnected(SplashActivity.this)){
             new CountDownTimer(1500, 1000) {
 
                 @Override
@@ -62,11 +62,11 @@ public class SplashActivity extends AppCompatActivity {
                     startActivity(new Intent(SplashActivity.this,MainActivity.class));
                     finish();
                 }
-            };
+            }.start();
 
         }else {
             Toast.makeText(SplashActivity.this,getResources().getString(R.string.internet_error),Toast.LENGTH_SHORT).show();
-        }*/
+        }
 
     }
 
