@@ -63,5 +63,7 @@
 
     </LinearLayout>
 
+<include
+    layout="@layout/login_startuptab"/>
 
 </RelativeLayout>
