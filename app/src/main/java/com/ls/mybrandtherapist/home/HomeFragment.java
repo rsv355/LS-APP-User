@@ -1,53 +1,34 @@
 package com.ls.mybrandtherapist.home;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.ls.mybrandtherapist.R;
+import com.ls.mybrandtherapist.home.presenter.HomePresenter;
+import com.ls.mybrandtherapist.home.presenter.HomePresenterImpl;
+import com.ls.mybrandtherapist.home.presenter.HomeView;
 import com.ls.mybrandtherapist.widget.CircleMenuLayout;
 
-public class HomeFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+public class HomeFragment extends Fragment implements HomeView{
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-    private String[] mItemTexts = new String[] { "Blood Bank", "Result", "Settings",
-            "Clubs", "Share App", "About Us" };
-    private int[] mItemImgs = new int[] { R.drawable.ic_blood,
+    private String[] mItemTexts = new String[]{"Blood Bank", "Result", "Settings",
+            "Clubs", "Share App", "About Us"};
+    private int[] mItemImgs = new int[]{R.drawable.ic_blood,
             R.drawable.icon_result, R.drawable.icon_setting,
             R.drawable.icon_reports, R.drawable.icon_share,
-            R.drawable.icon_aboutus };
+            R.drawable.icon_aboutus};
     CircleMenuLayout mCircleMenuLayout;
+    private HomePresenter homePresenter;
 
-    public HomeFragment() {
-        // Required empty public constructor
-    }
-
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
@@ -56,11 +37,54 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View parent = inflater.inflate(R.layout.fragment_home, container, false);
-        mCircleMenuLayout = (CircleMenuLayout)parent.findViewById(R.id.id_menulayout);
+        mCircleMenuLayout = (CircleMenuLayout) parent.findViewById(R.id.id_menulayout);
         mCircleMenuLayout.setMenuItemIconsAndTexts(mItemImgs, mItemTexts);
+        homePresenter = new HomePresenterImpl(this);
+        mCircleMenuLayout.setOnMenuItemClickListener(new CircleMenuLayout.OnMenuItemClickListener() {
+            @Override
+            public void itemClick(View view, int pos) {
+                homePresenter.onCircleItemClick(pos);
+            }
+
+            @Override
+            public void itemCenterClick(View view) {
+            }
+        });
 
         return parent;
     }
 
+
+    @Override
+    public void gotoAboutUs() {
+
+
+
+    }
+
+    @Override
+    public void gotoSettings() {
+
+    }
+
+    @Override
+    public void gotoBloodBank() {
+
+    }
+
+    @Override
+    public void gotoResult() {
+
+    }
+
+    @Override
+    public void gotoClubs() {
+
+    }
+
+    @Override
+    public void gotoShareApp() {
+
+    }
 
 }

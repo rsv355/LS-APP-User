@@ -24,7 +24,6 @@ import android.view.Display;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-
 import com.ls.mybrandtherapist.R;
 
 import java.nio.charset.Charset;
@@ -60,40 +59,40 @@ public class Functions {
         activity.startActivity(i);
     }
 
-    public static String stingToUTF(String val){
+    public static String stingToUTF(String val) {
         return Charset.forName("UTF-8").encode(val).toString();
     }
 
 
-    public static double getDeviceHeight(Context _ctx){
+    public static double getDeviceHeight(Context _ctx) {
         double deviceSize = 0f;
-        Activity act = (Activity)_ctx;
+        Activity act = (Activity) _ctx;
         Display display = act.getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
         int height = size.y;
-        if(height<800){
+        if (height < 800) {
             deviceSize = 4f;
-        }else  if(height>800 && height <1000){
+        } else if (height > 800 && height < 1000) {
             deviceSize = 4.5f;
-        } else if(height>1000 && height <1500){
+        } else if (height > 1000 && height < 1500) {
             deviceSize = 5f;
-        }else{
+        } else {
             deviceSize = 5.5f;
         }
         return deviceSize;
     }
 
-    public static double getDeviceInch(Context _ctx){
+    public static double getDeviceInch(Context _ctx) {
         setRealDeviceSizeInPixels(_ctx);
 
         DisplayMetrics dm = new DisplayMetrics();
-        Activity act = (Activity)_ctx;
+        Activity act = (Activity) _ctx;
         act.getWindowManager().getDefaultDisplay().getMetrics(dm);
         double x = Math.pow(mWidthPixels / dm.xdpi, 2);
         double y = Math.pow(mHeightPixels / dm.ydpi, 2);
         double screenInches = Math.sqrt(x + y);
-        Log.e("@@@@@ Screen inches : ","" + screenInches);
+        Log.e("@@@@@ Screen inches : ", "" + screenInches);
         return screenInches;
     }
 
@@ -132,23 +131,22 @@ public class Functions {
     }
 
 
-    public static boolean isInternetConnected(Context _context){
+    public static boolean isInternetConnected(Context _context) {
         ConnectivityManager connectivity = (ConnectivityManager) _context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        if (connectivity != null)
-        {
+        if (connectivity != null) {
             NetworkInfo[] info = connectivity.getAllNetworkInfo();
             if (info != null)
                 for (int i = 0; i < info.length; i++)
-                    if (info[i].getState() == NetworkInfo.State.CONNECTED)
-                    {
+                    if (info[i].getState() == NetworkInfo.State.CONNECTED) {
                         return true;
                     }
 
         }
         return false;
     }
+
     public static String getAppVersion(Context _ctx) {
-        String appVersion="";
+        String appVersion = "";
         try {
             PackageInfo pInfo = _ctx.getPackageManager().getPackageInfo(_ctx.getPackageName(), 0);
             appVersion = pInfo.versionName;
@@ -159,7 +157,7 @@ public class Functions {
     }
 
 
-    public static void showAlert(Context _context){
+    public static void showAlert(Context _context) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                 _context);
 
@@ -185,11 +183,11 @@ public class Functions {
     }
 
 
-    public static String UnicodeTOString(String inputUnicode){
-        Scanner scanner =  new Scanner(inputUnicode);
+    public static String UnicodeTOString(String inputUnicode) {
+        Scanner scanner = new Scanner(inputUnicode);
         String unicodeCharStr = scanner.findWithinHorizon("\\\\{1}u[0-9a-fA-F]{4}", 0);
-        char unicodeChar = (char)(int)Integer.valueOf(unicodeCharStr.substring(2, 6), 16);
-        inputUnicode = inputUnicode.replace(unicodeCharStr, unicodeChar+"");
+        char unicodeChar = (char) (int) Integer.valueOf(unicodeCharStr.substring(2, 6), 16);
+        inputUnicode = inputUnicode.replace(unicodeCharStr, unicodeChar + "");
         return inputUnicode;
     }
 
@@ -260,18 +258,18 @@ public class Functions {
         return formattedDate;
     }
 
-    public static void ShareTipDataByWhatsAPP(Context _ctx,String topicName,String subject,String topparagraph
-            ,StringBuilder sb,String bottompara,String published_by){
+    public static void ShareTipDataByWhatsAPP(Context _ctx, String topicName, String subject, String topparagraph
+            , StringBuilder sb, String bottompara, String published_by) {
 
         final String msg = "Hi,\n" +
-                "I would like to share one good "+topicName+" Tip with you\n" +
+                "I would like to share one good " + topicName + " Tip with you\n" +
                 subject +
-                AppConstants.SPACE+topparagraph+"\n"+AppConstants.SPACE+sb.toString().trim()+"\n"+bottompara +
-                AppConstants.SPACE+"Posted by,\n" +
-                AppConstants.SPACE+ published_by+" on EduBuzz APP\n" +
-                AppConstants.SPACE+"Uplift your Life with EduBuzz !!";
+                AppConstants.SPACE + topparagraph + "\n" + AppConstants.SPACE + sb.toString().trim() + "\n" + bottompara +
+                AppConstants.SPACE + "Posted by,\n" +
+                AppConstants.SPACE + published_by + " on EduBuzz APP\n" +
+                AppConstants.SPACE + "Uplift your Life with EduBuzz !!";
 
-        boolean isWhatsappInstalled = whatsappInstalledOrNot(_ctx,"com.whatsapp");
+        boolean isWhatsappInstalled = whatsappInstalledOrNot(_ctx, "com.whatsapp");
         if (isWhatsappInstalled) {
             Intent waIntent = new Intent(Intent.ACTION_SEND);
             waIntent.setType("text/plain");
@@ -301,19 +299,19 @@ public class Functions {
         }
     }
 
-    public static void ShareTipDataByFacebook(Context _ctx,String topicName,String subject,String topparagraph
-            ,StringBuilder sb,String bottompara,String published_by){
+    public static void ShareTipDataByFacebook(Context _ctx, String topicName, String subject, String topparagraph
+            , StringBuilder sb, String bottompara, String published_by) {
 
         final String msg = "Hi,\n" +
-                "I would like to share one good "+topicName+" Tip with you\n" +
+                "I would like to share one good " + topicName + " Tip with you\n" +
                 subject +
-                AppConstants.SPACE+topparagraph+"\n"+AppConstants.SPACE+sb.toString().trim()+"\n"+bottompara +
-                AppConstants.SPACE+"Posted by,\n" +
-                AppConstants.SPACE+ published_by+" on EduBuzz APP\n" +
-                AppConstants.SPACE+"Uplift your Life with EduBuzz !!";
+                AppConstants.SPACE + topparagraph + "\n" + AppConstants.SPACE + sb.toString().trim() + "\n" + bottompara +
+                AppConstants.SPACE + "Posted by,\n" +
+                AppConstants.SPACE + published_by + " on EduBuzz APP\n" +
+                AppConstants.SPACE + "Uplift your Life with EduBuzz !!";
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
-        shareIntent.putExtra(Intent.EXTRA_SUBJECT,"EduBuzz");
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "EduBuzz");
         shareIntent.putExtra(Intent.EXTRA_TEXT, "" + msg);
 //                        shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
 
@@ -333,16 +331,16 @@ public class Functions {
 
     }
 
-    public static void ShareTipDataByTwitter(Context _ctx,String topicName,String subject,String topparagraph
-            ,StringBuilder sb,String bottompara,String published_by){
+    public static void ShareTipDataByTwitter(Context _ctx, String topicName, String subject, String topparagraph
+            , StringBuilder sb, String bottompara, String published_by) {
 
         final String msg = "Hi,\n" +
-                "I would like to share one good "+topicName+" Tip with you\n" +
+                "I would like to share one good " + topicName + " Tip with you\n" +
                 subject +
-                AppConstants.SPACE+topparagraph+"\n"+AppConstants.SPACE+sb.toString().trim()+"\n"+bottompara +
-                AppConstants.SPACE+"Posted by,\n" +
-                AppConstants.SPACE+ published_by+" on EduBuzz APP\n" +
-                AppConstants.SPACE+"Uplift your Life with EduBuzz !!";
+                AppConstants.SPACE + topparagraph + "\n" + AppConstants.SPACE + sb.toString().trim() + "\n" + bottompara +
+                AppConstants.SPACE + "Posted by,\n" +
+                AppConstants.SPACE + published_by + " on EduBuzz APP\n" +
+                AppConstants.SPACE + "Uplift your Life with EduBuzz !!";
 
         Intent tweetIntent = new Intent(Intent.ACTION_SEND);
         tweetIntent.putExtra(Intent.EXTRA_TEXT, "" + msg);
@@ -352,8 +350,8 @@ public class Functions {
         List<ResolveInfo> resolvedInfoList = packManager.queryIntentActivities(tweetIntent, PackageManager.MATCH_DEFAULT_ONLY);
 
         boolean resolved = false;
-        for(ResolveInfo resolveInfo: resolvedInfoList){
-            if(resolveInfo.activityInfo.packageName.startsWith("com.twitter.android")){
+        for (ResolveInfo resolveInfo : resolvedInfoList) {
+            if (resolveInfo.activityInfo.packageName.startsWith("com.twitter.android")) {
                 tweetIntent.setClassName(
                         resolveInfo.activityInfo.packageName,
                         resolveInfo.activityInfo.name);
@@ -361,11 +359,11 @@ public class Functions {
                 break;
             }
         }
-        if(resolved){
+        if (resolved) {
             _ctx.startActivity(tweetIntent);
-        }else{
+        } else {
             Intent i = new Intent();
-            i.putExtra(Intent.EXTRA_TEXT, ""+msg);
+            i.putExtra(Intent.EXTRA_TEXT, "" + msg);
             i.setAction(Intent.ACTION_VIEW);
             i.setData(Uri.parse("https://twitter.com/intent/tweet?text=message&via=profileName"));
             _ctx.startActivity(i);
@@ -374,11 +372,11 @@ public class Functions {
 
     }
 
-    public static void ShareLessonData(){
+    public static void ShareLessonData() {
 
     }
 
-    public static boolean whatsappInstalledOrNot(Context ctx,String uri) {
+    public static boolean whatsappInstalledOrNot(Context ctx, String uri) {
         PackageManager pm = ctx.getPackageManager();
         boolean app_installed = false;
         try {
