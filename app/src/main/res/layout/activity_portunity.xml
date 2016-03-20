@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    android:orientation="vertical"
+    tools:context="com.ls.mybrandtherapist.success_toolkit.SuccessToolkitActivity">
+
+    <include layout="@layout/app_bar" />
+
+    <include layout="@layout/item_header_tips"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen16dp"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen16dp">
+
+        <com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/tablayout_opportunities"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="left"
+            tl:tl_bar_color="#ffffff"
+            tl:tl_indicator_color="@color/green_ls"
+            tl:tl_indicator_corner_radius="0dp"
+            tl:tl_tab_width="90dp" />
+
+        <FrameLayout
+            android:id="@+id/frameOpportunities"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"></FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

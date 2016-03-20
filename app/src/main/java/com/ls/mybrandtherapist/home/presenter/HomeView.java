@@ -5,17 +5,16 @@ package com.ls.mybrandtherapist.home.presenter;
  */
 public interface HomeView {
 
-    void gotoAboutUs();
 
-    void gotoSettings();
+    void gotoMyStory();
+    void gotoVirtualMentorSesson();
+    void gotoBookBrandTherapySesson();
+    void gotoSuccessToolkit();
+    void gotoMyWorkBook();
+    void gotoHostWorkshop();
+    void gotoSubmitResume();
+    void gotoSearchOpportunities();
 
-    void gotoBloodBank();
-
-    void gotoResult();
-
-    void gotoClubs();
-
-    void gotoShareApp();
 
 
 

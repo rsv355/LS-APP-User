@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    android:orientation="vertical"
+    tools:context="com.ls.mybrandtherapist.success_toolkit.SuccessToolkitActivity">
+
+    <include layout="@layout/app_bar" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No tips" />
+
+    <cn.iwgang.familiarrecyclerview.FamiliarRecyclerView
+        android:id="@+id/recyclerTips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:frv_divider="@null"
+        app:frv_dividerHeight="0dp"
+        app:frv_emptyView="@id/tv_empty"
+        app:frv_layoutManager="linear"
+        app:frv_layoutManagerOrientation="vertical"></cn.iwgang.familiarrecyclerview.FamiliarRecyclerView>
+
+</LinearLayout>

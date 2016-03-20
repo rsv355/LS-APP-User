@@ -5,7 +5,7 @@ import android.widget.Toast;
 /**
  * Created by dhruvil on 15-03-2016.
  */
-public class HomePresenterImpl implements HomePresenter{
+public class HomePresenterImpl implements HomePresenter {
 
     private HomeView homeView;
 
@@ -17,29 +17,40 @@ public class HomePresenterImpl implements HomePresenter{
     public void onCircleItemClick(int pos) {
 
 
-        switch (pos){
+        switch (pos) {
             case 0:
-                homeView.gotoBloodBank();
+                homeView.gotoMyStory();
                 break;
 
             case 1:
-                homeView.gotoResult();
+                homeView.gotoVirtualMentorSesson();
                 break;
 
             case 2:
-                homeView.gotoSettings();
+                homeView.gotoBookBrandTherapySesson();
                 break;
 
             case 3:
-                homeView.gotoClubs();
+                homeView.gotoSuccessToolkit();
                 break;
 
             case 4:
-                homeView.gotoShareApp();
+                homeView.gotoMyWorkBook();
                 break;
 
             case 5:
-                homeView.gotoAboutUs();
+                homeView.gotoHostWorkshop();
+                break;
+
+            case 6:
+                homeView.gotoSubmitResume();
+
+                break;
+
+            case 7:
+
+                homeView.gotoSearchOpportunities();
+
                 break;
 
 

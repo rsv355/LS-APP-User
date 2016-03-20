@@ -19,18 +19,23 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:theme="@style/NoActionBar"
-            android:name=".login_signup_stage.Log_Sign_ParentActivity"></activity>
+            android:name=".login_signup_stage.Log_Sign_ParentActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".success_toolkit.SuccessToolkitActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".search_opportunities.SearchOpportunitiesActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".opportunities.OpportunityActivity"
+            android:theme="@style/NoActionBar"></activity>
     </application>
 
 </manifest>

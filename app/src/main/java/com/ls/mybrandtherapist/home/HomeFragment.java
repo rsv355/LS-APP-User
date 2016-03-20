@@ -1,5 +1,6 @@
 package com.ls.mybrandtherapist.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,16 +12,19 @@ import com.ls.mybrandtherapist.R;
 import com.ls.mybrandtherapist.home.presenter.HomePresenter;
 import com.ls.mybrandtherapist.home.presenter.HomePresenterImpl;
 import com.ls.mybrandtherapist.home.presenter.HomeView;
+import com.ls.mybrandtherapist.opportunities.OpportunityActivity;
+import com.ls.mybrandtherapist.search_opportunities.SearchOpportunitiesActivity;
+import com.ls.mybrandtherapist.success_toolkit.SuccessToolkitActivity;
 import com.ls.mybrandtherapist.widget.CircleMenuLayout;
 
-public class HomeFragment extends Fragment implements HomeView{
+public class HomeFragment extends Fragment implements HomeView {
 
-    private String[] mItemTexts = new String[]{"Blood Bank", "Result", "Settings",
-            "Clubs", "Share App", "About Us"};
+    private String[] mItemTexts = new String[]{"My Story", "Mentor", "Therapy",
+            "Toolkit", "Workbook", "Workshop", "Resume", "Opportunity"};
     private int[] mItemImgs = new int[]{R.drawable.ic_blood,
             R.drawable.icon_result, R.drawable.icon_setting,
             R.drawable.icon_reports, R.drawable.icon_share,
-            R.drawable.icon_aboutus};
+            R.drawable.icon_aboutus, R.drawable.icon_aboutus, R.drawable.icon_aboutus};
     CircleMenuLayout mCircleMenuLayout;
     private HomePresenter homePresenter;
 
@@ -56,40 +60,57 @@ public class HomeFragment extends Fragment implements HomeView{
 
 
     @Override
-    public void gotoAboutUs() {
-
-
-
-
-
-
-        Toast.makeText(getActivity(), "About", Toast.LENGTH_SHORT).show();
+    public void gotoMyStory() {
 
     }
 
     @Override
-    public void gotoSettings() {
+    public void gotoVirtualMentorSesson() {
 
     }
 
     @Override
-    public void gotoBloodBank() {
+    public void gotoBookBrandTherapySesson() {
+
+        Intent iSuccessToolkit = new Intent(getActivity(), SearchOpportunitiesActivity.class);
+        startActivity(iSuccessToolkit);
 
     }
 
     @Override
-    public void gotoResult() {
+    public void gotoSuccessToolkit() {
+        Intent iSuccessToolkit = new Intent(getActivity(), SuccessToolkitActivity.class);
+        startActivity(iSuccessToolkit);
 
     }
 
     @Override
-    public void gotoClubs() {
+    public void gotoMyWorkBook() {
 
     }
 
     @Override
-    public void gotoShareApp() {
+    public void gotoHostWorkshop() {
+
+        Intent iSuccessToolkit = new Intent(getActivity(), SearchOpportunitiesActivity.class);
+        startActivity(iSuccessToolkit);
 
     }
 
+
+    @Override
+    public void gotoSubmitResume() {
+
+        Toast.makeText(getActivity(), "Submit Resume", Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void gotoSearchOpportunities() {
+
+        Intent iSuccessToolkit = new Intent(getActivity(), OpportunityActivity.class);
+        startActivity(iSuccessToolkit);
+
+
+    }
 }

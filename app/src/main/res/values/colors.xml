@@ -11,4 +11,6 @@
     <color name="appSilverColor">#cccccc</color>
     <color name="appDividerBlueColor">#136ba2</color>
     <color name="appWhiteColor">#ffffff</color>
+    <color name="green_ls">#14B2A4</color>
+
 </resources>
