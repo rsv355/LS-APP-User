@@ -59,6 +59,7 @@ public class HomeFragment extends Fragment implements HomeView{
     public void gotoAboutUs() {
 
 
+        Toast.makeText(getActivity(), "About", Toast.LENGTH_SHORT).show();
 
     }
 
