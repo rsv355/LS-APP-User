@@ -10,9 +10,8 @@ import android.widget.GridLayout;
 import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
-import com.curiousboot.jumpsum.Model.GetAllSports;
-import com.curiousboot.jumpsum.Model.Sport;
-import com.curiousboot.jumpsum.R;
+import com.ls.mybrandtherapist.R;
+import com.ls.mybrandtherapist.submit_resume.model.PassionIndustry;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -23,7 +22,7 @@ public class SportSelector extends LinearLayout {
     private Context context;
     private LayoutInflater inflater;
     private GridLayout gridCheckBox;
-    private Set<Sport> selectedSport;
+    private Set<PassionIndustry> selectedSport;
     private OnClickListener singleClickListner = new OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -131,35 +130,17 @@ public class SportSelector extends LinearLayout {
 
     }
 
-    public void setupGridAdapter(ArrayAdapter<GetAllSports> getAllSportsArrayAdapter) {
 
-    }
-
-    public void setAdapter(ArrayList<Sport> sports, ArrayList<Sport> UserSelctedSports, boolean isDisabled) {
+    public void setAdapter(ArrayList<PassionIndustry> sports, boolean isDisabled) {
 
 
         gridCheckBox.removeAllViews();
 
-        for (Sport sport : sports) {
+        for (PassionIndustry sport : sports) {
             SportCheckBox checkBox = new SportCheckBox(context);
             checkBox.setSport(sport);
 
-            for (Sport userSelectedsport : UserSelctedSports) {
-
-                if (sport.SportId == userSelectedsport.SportId) {
-
-
-                    checkBox.setEnabled(!isDisabled);
-                    if (userSelectedsport.IsPrimarySport) {
-                        checkBox.setPrimary(true);
-
-                    } else {
-                        checkBox.setChecked(true);
-                    }
-                }
-
-            }
-            Glide.with(context).load(sport.SportIcon).thumbnail(0.10f).into(checkBox.icon);
+            // Glide.with(context).load(sport.SportIcon).thumbnail(0.10f).into(checkBox.icon);
             checkBox.icon.setColorFilter(Color.parseColor("#BDBDBD"));
             gridCheckBox.addView(checkBox);
             gridCheckBox.invalidate();
@@ -180,9 +161,9 @@ public class SportSelector extends LinearLayout {
 
     }
 
-    public ArrayList<Sport> getSelectedSports() {
+    public ArrayList<PassionIndustry> getSelectedSports() {
 
-        ArrayList<Sport> selectedSport = new ArrayList<>();
+        ArrayList<PassionIndustry> selectedSport = new ArrayList<>();
 
         for (int i = 0; i < gridCheckBox.getChildCount(); i++) {
             SportCheckBox sportCheckBox = (SportCheckBox) gridCheckBox.getChildAt(i);
@@ -196,9 +177,9 @@ public class SportSelector extends LinearLayout {
 
     }
 
-    public ArrayList<Sport> getPrimarySport() {
+    public ArrayList<PassionIndustry> getPrimarySport() {
 
-        ArrayList<Sport> primarySport = new ArrayList<>();
+        ArrayList<PassionIndustry> primarySport = new ArrayList<>();
 
         for (int i = 0; i < gridCheckBox.getChildCount(); i++) {
             SportCheckBox sportCheckBox = (SportCheckBox) gridCheckBox.getChildAt(i);
@@ -217,7 +198,7 @@ public class SportSelector extends LinearLayout {
     }
 
 
-    public Set<Sport> getSelectedSport() {
+    public Set<PassionIndustry> getSelectedSport() {
 
         return selectedSport;
     }
