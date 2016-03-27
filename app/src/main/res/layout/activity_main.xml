@@ -28,7 +28,7 @@
         tl:tl_iconMargin="@dimen/dimen5dp"
         tl:tl_iconWidth="@dimen/dimen18dp"
         tl:tl_indicator_bounce_enable="false"
-        tl:tl_indicator_color="#2C97DE"
+        tl:tl_indicator_color="#303F9F"
         tl:tl_indicator_gravity="BOTTOM"
         tl:tl_textSelectColor="#2C97DE"
         tl:tl_textUnselectColor="#66000000"

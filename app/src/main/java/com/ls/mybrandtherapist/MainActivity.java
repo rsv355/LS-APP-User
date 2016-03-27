@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Fragment> mFragments = new ArrayList<>();
     private String[] mTitles = {"", "", "", "", ""};
     private int[] mIconUnselectIds = {
-            R.mipmap.ic_launcher, R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher};
+            R.drawable.home_unsel, R.drawable.email_unsel,
+            R.drawable.user_unsel, R.drawable.profile_unsel, R.drawable.web_unsel};
     private int[] mIconSelectIds = {
-            R.mipmap.ic_launcher, R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher};
+            R.drawable.home_sel, R.drawable.email_sel,
+            R.drawable.user_sel, R.drawable.profile_sel, R.drawable.web_sel};
 
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
     private ViewPager viewPager;
