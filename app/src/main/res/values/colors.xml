@@ -12,5 +12,7 @@
     <color name="appDividerBlueColor">#136ba2</color>
     <color name="appWhiteColor">#ffffff</color>
     <color name="green_ls">#14B2A4</color>
+    <color name="dark_transperent">#aa000000</color>
+    <color name="green_ls_transperent">#aa14B2A4</color>
 
 </resources>

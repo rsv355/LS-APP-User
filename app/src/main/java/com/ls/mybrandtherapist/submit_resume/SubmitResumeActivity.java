@@ -8,18 +8,39 @@ import android.widget.TextView;
 
 import com.ls.mybrandtherapist.R;
 import com.ls.mybrandtherapist.submit_resume.model.PassionIndustry;
+import com.ls.mybrandtherapist.submit_resume.widget.SportPicker;
 
 import java.util.ArrayList;
 
-public class SubmitResumeActivity extends AppCompatActivity implements SubmitResumeView{
+public class SubmitResumeActivity extends AppCompatActivity implements SubmitResumeView {
 
     private Toolbar toolbar;
+    private SportPicker passionSelecter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_submit_resume);
+        init();
         initToolbar();
+
+    }
+
+    private void init() {
+        passionSelecter = (SportPicker) findViewById(R.id.passionSelecter);
+
+        ArrayList<PassionIndustry> passionIndustries = new ArrayList<>();
+        passionIndustries.add(new PassionIndustry());
+        passionIndustries.add(new PassionIndustry());
+        passionIndustries.add(new PassionIndustry());
+        passionIndustries.add(new PassionIndustry());
+        passionSelecter.setAdapter(passionIndustries);
+        passionSelecter.setOnSportsChangeListener(new SportPicker.OnSportsChangeListener() {
+            @Override
+            public void SportsChanged(PassionIndustry sport) {
+
+            }
+        });
 
     }
 

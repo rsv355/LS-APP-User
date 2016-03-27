@@ -1,36 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/parentSportCheckBox"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="8dp"
-        android:background="@android:color/transparent"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:paddingLeft="8dp">
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:src="@drawable/ic_action_more_horiz"
+        android:tint="#d1d1d1" />
 
-        <ImageView
-            android:id="@+id/icon"
-            android:layout_width="31dp"
-            android:layout_height="31dp"
-            android:src="@drawable/ic_action_more_horiz"
-            android:tint="#d1d1d1" />
+    <TextView
 
-        <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FOOTBALL"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
 
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FOOTBALL"
-            android:textAllCaps="true"
-            android:textColor="@android:color/white"
-            android:textSize="12sp" />
-
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>

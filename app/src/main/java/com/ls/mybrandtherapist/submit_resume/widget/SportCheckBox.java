@@ -25,7 +25,7 @@ public class SportCheckBox extends LinearLayout {
     private LayoutInflater inflater;
     private OnTapListner onTapListner;
     private boolean isChecked;
-    private RelativeLayout checkBoxParent;
+    private LinearLayout checkBoxParent;
     private boolean isPrimary;
     private TextView text;
     private PassionIndustry ownedSport;
@@ -60,12 +60,26 @@ public class SportCheckBox extends LinearLayout {
 
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         parentView = inflater.inflate(R.layout.item_sportcheckbox, this);
-        checkBoxParent = (RelativeLayout) parentView.findViewById(R.id.parentSportCheckBox);
+        checkBoxParent = (LinearLayout) parentView.findViewById(R.id.parentSportCheckBox);
         //  gestureDetector = new GestureDetector(context, new GestureListener());
         setChecked(isChecked);
 
         icon = (ImageView) parentView.findViewById(R.id.icon);
         text = (TextView) parentView.findViewById(R.id.text);
+
+        reDrawParent();
+
+
+
+    }
+
+    private void reDrawParent() {
+
+        int width = context.getResources().getDisplayMetrics().widthPixels;
+        int factor = (width/3);
+        checkBoxParent.getLayoutParams().width = width/3;
+        checkBoxParent.getLayoutParams().height = width/3;
+        checkBoxParent.requestLayout();
 
     }
 
@@ -153,9 +167,9 @@ public class SportCheckBox extends LinearLayout {
 
         if (isChecked == true) {
             isPrimary = false;
-            setColor(getResources().getColor(R.color.accent));
+            setColor(getResources().getColor(R.color.green_ls_transperent));
         } else {
-            setColor(getResources().getColor(R.color.green_ls));
+            setColor(getResources().getColor(R.color.dark_transperent));
         }
 
     }
