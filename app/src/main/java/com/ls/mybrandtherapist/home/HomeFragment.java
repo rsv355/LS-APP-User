@@ -14,6 +14,7 @@ import com.ls.mybrandtherapist.home.presenter.HomePresenterImpl;
 import com.ls.mybrandtherapist.home.presenter.HomeView;
 import com.ls.mybrandtherapist.opportunities.OpportunityActivity;
 import com.ls.mybrandtherapist.search_opportunities.SearchOpportunitiesActivity;
+import com.ls.mybrandtherapist.submit_resume.SubmitResumeActivity;
 import com.ls.mybrandtherapist.success_toolkit.SuccessToolkitActivity;
 import com.ls.mybrandtherapist.widget.CircleMenuLayout;
 
@@ -101,7 +102,10 @@ public class HomeFragment extends Fragment implements HomeView {
     @Override
     public void gotoSubmitResume() {
 
-        Toast.makeText(getActivity(), "Submit Resume", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getActivity(), "Submit Resume", Toast.LENGTH_SHORT).show();
+
+        Intent iSuccessToolkit = new Intent(getActivity(), SubmitResumeActivity.class);
+        startActivity(iSuccessToolkit);
 
     }
 
