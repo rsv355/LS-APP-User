@@ -30,10 +30,20 @@ public class SubmitResumeActivity extends AppCompatActivity implements SubmitRes
         passionSelecter = (SportPicker) findViewById(R.id.passionSelecter);
 
         ArrayList<PassionIndustry> passionIndustries = new ArrayList<>();
-        passionIndustries.add(new PassionIndustry());
-        passionIndustries.add(new PassionIndustry());
-        passionIndustries.add(new PassionIndustry());
-        passionIndustries.add(new PassionIndustry());
+        passionIndustries.add(new PassionIndustry("Music"));
+        passionIndustries.add(new PassionIndustry("Communications"));
+        passionIndustries.add(new PassionIndustry("Finance"));
+        passionIndustries.add(new PassionIndustry("Health Tech"));
+        passionIndustries.add(new PassionIndustry("Transportation"));
+        passionIndustries.add(new PassionIndustry("Mobile Tech"));
+        passionIndustries.add(new PassionIndustry("Bio Tech"));
+        passionIndustries.add(new PassionIndustry("Music"));
+        passionIndustries.add(new PassionIndustry("Communications"));
+        passionIndustries.add(new PassionIndustry("Finance"));
+        passionIndustries.add(new PassionIndustry("Health Tech"));
+        passionIndustries.add(new PassionIndustry("Transportation"));
+        passionIndustries.add(new PassionIndustry("Mobile Tech"));
+        passionIndustries.add(new PassionIndustry("Bio Tech"));
         passionSelecter.setAdapter(passionIndustries);
         passionSelecter.setOnSportsChangeListener(new SportPicker.OnSportsChangeListener() {
             @Override

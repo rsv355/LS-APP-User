@@ -95,7 +95,7 @@ public class SportCheckBox extends LinearLayout {
     public void setSport(PassionIndustry sport) {
         ownedSport = sport;
         //todo set name
-        // text.setText(ownedSport.SportName);
+         text.setText(ownedSport.getName());
     }
 
     public String geCheckedText() {
