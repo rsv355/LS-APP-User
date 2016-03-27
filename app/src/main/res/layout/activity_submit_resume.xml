@@ -30,11 +30,23 @@
         android:text="Submit"
         android:textColor="@android:color/white" />
 
-
-    <com.ls.mybrandtherapist.submit_resume.widget.SportPicker
-        android:layout_marginTop="@dimen/dimen16dp"
-        android:id="@+id/passionSelecter"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></com.ls.mybrandtherapist.submit_resume.widget.SportPicker>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen22dp"
+        android:gravity="center"
+        android:text="SELECT PASSION INDUSTRY"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen8dp">
+
+        <com.ls.mybrandtherapist.submit_resume.widget.SportPicker
+            android:id="@+id/passionSelecter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.ls.mybrandtherapist.submit_resume.widget.SportPicker>
+    </ScrollView>
 </LinearLayout>

@@ -47,19 +47,19 @@
             android:theme="@style/NoActionBar">
 
 
-
         </activity>
         <activity
             android:name=".mystory.MyStoryActivity"
-            android:theme="@style/NoActionBar" >
+            android:theme="@style/NoActionBar">
 
 
-            </activity>
+        </activity>
 
 
         <activity
             android:name=".sucess_workbook.SucessWorkBookActivity"
-            android:theme="@style/NoActionBar" >
+            android:theme="@style/NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
