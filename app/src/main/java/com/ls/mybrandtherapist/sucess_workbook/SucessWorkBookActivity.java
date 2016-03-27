@@ -30,6 +30,7 @@ public class SucessWorkBookActivity extends AppCompatActivity {
 
     }
 
+
     private void init() {
 
         mFragments = new ArrayList<>();
