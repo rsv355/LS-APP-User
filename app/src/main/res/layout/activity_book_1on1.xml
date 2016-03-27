@@ -9,13 +9,9 @@
     tools:context="com.ls.mybrandtherapist.success_toolkit.SuccessToolkitActivity">
 
     <include layout="@layout/app_bar" />
+    <include
+        layout="@layout/item_header_tips"></include>
 
-    <ImageView
-        android:layout_marginTop="@dimen/dimen16dp"
-        android:layout_gravity="center"
-        android:layout_width="@dimen/dimen48dp"
-        android:layout_height="@dimen/dimen48dp"
-        android:src="@drawable/applogo_white" />
 
     <ScrollView
         android:layout_margin="@dimen/dimen16dp"

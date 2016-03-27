@@ -23,7 +23,7 @@
 
         <com.flyco.tablayout.SegmentTabLayout
             android:id="@+id/tablayout_opportunities"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_gravity="left"
             tl:tl_bar_color="#ffffff"
