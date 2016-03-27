@@ -20,12 +20,11 @@ import com.ls.mybrandtherapist.widget.CircleMenuLayout;
 
 public class HomeFragment extends Fragment implements HomeView {
 
-    private String[] mItemTexts = new String[]{"My Story", "Mentor", "Therapy",
-            "Toolkit", "Workbook", "Workshop", "Resume", "Opportunity"};
-    private int[] mItemImgs = new int[]{R.drawable.ic_blood,
-            R.drawable.icon_result, R.drawable.icon_setting,
-            R.drawable.icon_reports, R.drawable.icon_share,
-            R.drawable.icon_aboutus, R.drawable.icon_aboutus, R.drawable.icon_aboutus};
+    private String[] mItemTexts = new String[]{"WorkBook", "Mentor", "Therapy",
+            "Toolkit", "My Story", "Workshop", "Resume", "Opportunity"};
+    private int[] mItemImgs = new int[]{R.drawable.workbook, R.drawable.chat, R.drawable.thearpy,
+            R.drawable.toolkit, R.drawable.mystory,
+            R.drawable.workshop, R.drawable.resume, R.drawable.search};
     CircleMenuLayout mCircleMenuLayout;
     private HomePresenter homePresenter;
 
@@ -44,6 +43,7 @@ public class HomeFragment extends Fragment implements HomeView {
         View parent = inflater.inflate(R.layout.fragment_home, container, false);
         mCircleMenuLayout = (CircleMenuLayout) parent.findViewById(R.id.id_menulayout);
         mCircleMenuLayout.setMenuItemIconsAndTexts(mItemImgs, mItemTexts);
+
         homePresenter = new HomePresenterImpl(this);
         mCircleMenuLayout.setOnMenuItemClickListener(new CircleMenuLayout.OnMenuItemClickListener() {
             @Override
