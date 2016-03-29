@@ -15,7 +15,7 @@ import com.ls.mybrandtherapist.home.HomeFragment;
 import java.util.ArrayList;
 
 
-public class OpportunityActivity extends AppCompatActivity {
+public class opportunityActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private ArrayList<Fragment> mFragments = new ArrayList<>();

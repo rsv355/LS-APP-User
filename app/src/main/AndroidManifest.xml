@@ -27,6 +27,11 @@
             android:name=".SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
 
@@ -40,7 +45,7 @@
             android:name=".search_opportunities.SearchOpportunitiesActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".opportunities.OpportunityActivity"
+            android:name=".opportunities.opportunityActivity"
             android:theme="@style/NoActionBar"></activity>
         <activity
             android:name=".book1on1.Book1on1"
@@ -60,11 +65,6 @@
             android:name=".sucess_workbook.SucessWorkBookActivity"
             android:theme="@style/NoActionBar">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
 

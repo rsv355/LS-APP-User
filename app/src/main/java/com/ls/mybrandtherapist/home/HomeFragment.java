@@ -12,10 +12,11 @@ import com.ls.mybrandtherapist.R;
 import com.ls.mybrandtherapist.home.presenter.HomePresenter;
 import com.ls.mybrandtherapist.home.presenter.HomePresenterImpl;
 import com.ls.mybrandtherapist.home.presenter.HomeView;
-import com.ls.mybrandtherapist.opportunities.OpportunityActivity;
+import com.ls.mybrandtherapist.opportunities.opportunityActivity;
 import com.ls.mybrandtherapist.search_opportunities.SearchOpportunitiesActivity;
 import com.ls.mybrandtherapist.submit_resume.SubmitResumeActivity;
 import com.ls.mybrandtherapist.success_toolkit.SuccessToolkitActivity;
+import com.ls.mybrandtherapist.sucess_workbook.SucessWorkBookActivity;
 import com.ls.mybrandtherapist.widget.CircleMenuLayout;
 
 public class HomeFragment extends Fragment implements HomeView {
@@ -87,7 +88,8 @@ public class HomeFragment extends Fragment implements HomeView {
 
     @Override
     public void gotoMyWorkBook() {
-
+        Intent iSuccessToolkit = new Intent(getActivity(), SucessWorkBookActivity.class);
+        startActivity(iSuccessToolkit);
     }
 
     @Override
@@ -112,7 +114,7 @@ public class HomeFragment extends Fragment implements HomeView {
     @Override
     public void gotoSearchOpportunities() {
 
-        Intent iSuccessToolkit = new Intent(getActivity(), OpportunityActivity.class);
+        Intent iSuccessToolkit = new Intent(getActivity(), opportunityActivity.class);
         startActivity(iSuccessToolkit);
 
 
